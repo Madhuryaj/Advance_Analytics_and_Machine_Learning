@@ -1,0 +1,46 @@
+---
+title: "This is my 1st Markdown file"
+output: html_document
+date: "2024-03-02"
+author: "Madhurya"
+---
+
+"Lets write its content"
+
+# Heading Size 1 - Lets import 
+## Heading Size 2 - the library
+### Heading Size 3 - file
+
+```{r}
+library(dplyr)
+summary(cars)
+```
+
+# Even plots can be printed
+
+```{r,echo=TRUE}
+plot(cars)
+```
+
+## LETS LOAD next dataset
+
+```{r}
+library(datasets)
+data("airquality")
+summary(airquality)
+```
+
+# Lets do pair plots
+
+```{r}
+pairs(airquality)
+```
+
+Here's a simple regression model of Ozone on some predictors
+
+```{r}
+fit<-lm(Ozone~Solar.R+Wind+Temp,data=airquality)
+summary(fit)
+```
+
+
